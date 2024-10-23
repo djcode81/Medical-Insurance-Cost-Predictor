@@ -53,6 +53,30 @@ The analysis workflow is as follows:
 6. **Model Saving**:
    - The Random Forest model is saved as a `.pkl` file using `joblib` for future use.
 
+## Predicting Insurance Cost for a New Patient
+
+Once the model has been trained, you can predict the insurance cost for a new patient using the saved model file `patient_cost_predictor.pkl`.
+
+### Example: Loading the Model and Making a Prediction
+
+Below is an example of how to load the saved model and predict the insurance cost for a new patient:
+
+```python
+import pandas as pd
+import joblib
+
+# Load the trained model from file
+model = joblib.load('patient_cost_predictor.pkl')
+
+# Example of new patient data with the required feature names
+new_patient = pd.DataFrame([[45, 1, 24.6, 2, 0, 0, 1, 0]], 
+                            columns=['age', 'sex', 'bmi', 'children', 'smoker', 'region_northwest', 'region_southeast', 'region_southwest'])
+
+# Predict insurance cost for the new patient
+predicted_cost = model.predict(new_patient)
+print(f'Predicted insurance cost: {predicted_cost}')
+
+
 ## Running the Script
 
 To run the notebook, ensure that you have the necessary libraries installed. You can install the required dependencies by running the following command:
