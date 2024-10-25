@@ -1,4 +1,4 @@
-# Patient Insurance Cost Predictor
+# Medical Insurance Cost Predictor
 
 This project uses machine learning to predict medical insurance costs based on various factors like age, BMI, smoking status, and other features. The project involves exploratory data analysis, building predictive models using Linear Regression and Random Forest, and evaluating the models’ performance.
 
@@ -19,7 +19,7 @@ This project uses machine learning to predict medical insurance costs based on v
 
 ## Files
 
-- `Patient_insurance_cost_predictor_.ipynb`: The Jupyter Notebook containing the code for data analysis, modeling, and visualizations.
+- `_insurance_cost_predictor_.ipynb`: The Jupyter Notebook containing the code for data analysis, modeling, and visualizations.
 - `insurance.csv`: The dataset containing patient information such as age, BMI, smoking status, and insurance charges.
 - `patient_cost_predictor.pkl`: The saved Random Forest model used to predict insurance costs.
 
@@ -73,5 +73,5 @@ new_patient = pd.DataFrame([[45, 1, 24.6, 2, 0, 0, 1, 0]],
                             columns=['age', 'sex', 'bmi', 'children', 'smoker', 'region_northwest', 'region_southeast', 'region_southwest'])
 
 # Predicting insurance cost for the new patient
-predicted_cost = model.predict(new_patient)
+predicted_cost = model.predict(new_)
 print(f'Predicted insurance cost: {predicted_cost}')
